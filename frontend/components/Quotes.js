@@ -1,6 +1,6 @@
-import React from 'react'
-
-export default function Quotes(props) {
+import React, { useContext } from 'react';
+import { QuotesContext } from '../context/QuotesContext';
+export default function Quotes() {
   const {
     quotes,
     highlightedQuote,
@@ -9,7 +9,7 @@ export default function Quotes(props) {
     editQuoteAuthenticity,
     setHighlightedQuote,
     toggleVisibility,
-  } = props
+  } = useContext(QuotesContext);
   return (
     <div id="quotes">
       <h3>Quotes</h3>
